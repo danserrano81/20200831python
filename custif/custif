@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+message = 'Your test has been scored and you received the following grade '
+
+# wrap connection in a float() to accept decimals as numbers
+connection = float(input("what was your final score?"))
+
+# if input value was higher or equal to 25
+if connection >= 90:
+    message = message + 'A - Excellent Job.'
+elif connection >= 80:
+    message = message + 'B - Good job.'
+elif connection >= 70:
+    message = message + 'C - Average Joe.'
+elif connection >= 60:
+    message = message + 'D - Didn\'t Fail.'
+elif connection <= 59:
+    message = message + 'F - DO BETTER.'
+else:
+    message = message + 'You did not enter a proper score.'
+print(message)
+
