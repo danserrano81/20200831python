@@ -5,7 +5,13 @@
 message = 'Your test is graded, you received '
 
 # wrap connection in a float() to accept decimals as numbers
-connection = float(input("What is your final score?"))
+connection = input("What is your final score?")
+
+if connection.isnumeric():
+    connection = float(connection)
+else:
+    print("Please enter proper score")
+    exit()
 
 # if input value was higher or equal to 100
 if connection >= 90:
@@ -18,6 +24,5 @@ elif connection >= 60:
     message = message + 'D - Almost failed'
 elif connection <= 59:
     message = message + 'F - DO BETTER'		
-else:
-    message = message + 'Please input a proper score'
+
 print(message)
